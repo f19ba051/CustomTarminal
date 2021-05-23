@@ -1,15 +1,13 @@
 package terminal.custom.commands;
 
-import terminal.custom.Commands;
-import terminal.custom.PrimitiveCommandList;
+import terminal.custom.Command;
 
 import java.util.List;
 
-public class Add extends Commands {
-    private static Add add = new Add();
+public class Add extends Command {
 
-    private Add() {
-        PrimitiveCommandList.add(Add.class);
+    public Add() {
+        commandName = "add";
         System.out.println("aaa");
     }
 
