@@ -1,22 +1,22 @@
 package terminal.custom.commands;
 
 import terminal.custom.Command;
-
-import java.util.List;
+import terminal.custom.DoubleValuesNode;
 
 public class Add extends Command {
 
     public Add() {
         commandName = "add";
+        usingNode = new DoubleValuesNode();
+
         System.out.println("aaa");
     }
 
-    public String run(List<String> args) {
-        if (args.size() == 3) {
-            return args.get(1) + args.get(2);
-        }
-        else {
-            return "文法が間違っています。\nadd <num1> <num2>";
-        }
+    public String run() {
+        return String.valueOf(
+                Integer.parseInt(
+                    ((DoubleValuesNode) usingNode).getValue1()) +
+                Integer.parseInt(
+                        ((DoubleValuesNode) usingNode).getValue2()));
     }
 }
