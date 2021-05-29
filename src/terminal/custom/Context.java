@@ -11,6 +11,8 @@ public class Context {
 
     public Context(String text) {
         tokenizer = new StringTokenizer(text);
+        currentToken = tokenizer.nextToken();
+        System.out.println("current token : " + currentToken);
     }
 
     public String nextToken() {
@@ -20,7 +22,6 @@ public class Context {
         else {
             currentToken = null;
         }
-        System.out.println(tokenizer);
         return currentToken;
     }
 

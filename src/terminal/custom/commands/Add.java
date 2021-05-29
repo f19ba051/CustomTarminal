@@ -8,15 +8,14 @@ public class Add extends Command {
     public Add() {
         commandName = "add";
         usingNode = new DoubleValuesNode();
-
-        System.out.println("aaa");
     }
 
     public String run() {
-        return String.valueOf(
+        System.out.println(
                 Integer.parseInt(
-                    ((DoubleValuesNode) usingNode).getValue1()) +
-                Integer.parseInt(
-                        ((DoubleValuesNode) usingNode).getValue2()));
+                        ((DoubleValuesNode) usingNode).getValue1()) +
+                        Integer.parseInt(
+                                ((DoubleValuesNode) usingNode).getValue2()));
+        return "";
     }
 }

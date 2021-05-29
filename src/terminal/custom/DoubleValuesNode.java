@@ -11,12 +11,6 @@ public class DoubleValuesNode extends Node {
         value2 = context.getCurrentToken();
         context.skipToken(value2);
 
-        if (!value1.chars().allMatch(Character::isDigit)) {
-            throw new Exception(value1 + "is undefined.");
-        }
-        else if (!value2.chars().allMatch(Character::isDigit)) {
-            throw new Exception(value2 + "is undefined.");
-        }
     }
 
     public String getValue1() {

@@ -7,7 +7,7 @@ public class TerminalApplication {
     private static String querySyntax;
 
     public static void run() {
-        System.out.println("> ");
+        System.out.print("> ");
 
         try {
             query();
